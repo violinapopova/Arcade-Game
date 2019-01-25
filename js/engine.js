@@ -24,8 +24,8 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 600;
-    canvas.height = 720;
+    canvas.width = 505;
+    canvas.height = 606;
     doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
@@ -93,7 +93,7 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
-        player.update();
+    //    player.update();
     }
 
     /* This function initially draws the "game level", it will then call
@@ -107,19 +107,19 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/start_end_120X120.png',   // Top row is water
-                'images/road_120X120.png',   // Row 1 of 3 of stone
-                'images/road_120X120.png',   // Row 2 of 3 of stone
-                'images/road_120X120.png',   // Row 3 of 3 of stone
-                'images/plate-top_bottom_120X120.png',   // Row 1 of 2 of grass
-                'images/plate-top_bottom_120X120.png'    // Row 2 of 2 of grass
+                'images/water-block.png',   // Top row is water
+                'images/stone-block.png',   // Row 1 of 3 of stone
+                'images/stone-block.png',   // Row 2 of 3 of stone
+                'images/stone-block.png',   // Row 3 of 3 of stone
+                'images/grass-block.png',   // Row 1 of 2 of grass
+                'images/grass-block.png'    // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
             row, col;
 
         // Before drawing, clear existing canvas
-        ctx.clearRect(0,0,canvas.width,canvas.height)
+        ctx.clearRect(0,0,canvas.width,canvas.height);
 
         /* Loop through the number of rows and columns we've defined above
          * and, using the rowImages array, draw the correct image for that
@@ -134,7 +134,7 @@ var Engine = (function(global) {
                  * so that we get the benefits of caching these images, since
                  * we're using them over and over.
                  */
-                ctx.drawImage(Resources.get(rowImages[row]), col * 120, row * 120);
+                ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
             }
         }
 
@@ -169,16 +169,11 @@ var Engine = (function(global) {
      * all of these images are properly loaded our game will start.
      */
     Resources.load([
-        'images/road_120X120.png',
-        'images/start_end_120X120.png',
-        'images/plate-top_bottom_120X120.png',
-        'images/Drone1_120X120.png',
-        'images/Drone2_120X120.png',
-        'images/Drone3_120X120.png',
-        'images/Drone4_120X120.png',
-        'images/spaceship_rogue_120X120.png',
-        'images/spaceship_healer_120X120.png',
-        'images/spaceship_Tank_120X120.png',
+        'images/stone-block.png',
+        'images/water-block.png',
+        'images/grass-block.png',
+        'images/enemy-bug.png',
+        'images/char-boy.png'
     ]);
     Resources.onReady(init);
 
