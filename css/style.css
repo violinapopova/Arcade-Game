@@ -3,27 +3,33 @@ body {
     font-family: 'Aleo', serif;
 }
 
-/* Win window */
-
-.finished {
-  position: absolute;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  z-index: 10;
-  background-color: rgba(88, 6, 94, 0.81)
+.winning-game {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    margin-left: 10em;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(79, 223, 103, 0.7);
+    z-index: 10;
 }
 
-.finished-inner {
-  position: relative;
-  top: 40%;
-  text-align: center;
-  color: rgba(255, 255, 255, 1);
-  font-size: 20px;
+.game-notification {
+    font-size: 18px;
+    top: 35%;
+    color: #000;
+    position: absolute;
+    text-align: center;
 }
 
-.finished-inner a {
-  padding: 2em;
-  color: black;
+.game-notification a {
+    color: yellow;
+    background-color: #000;
+    padding: 1em;
+}
+
+.game-notification a:hover {
+    color: #000;
+    background-color: yellow;
+    padding: 1em;
 }
