@@ -1,20 +1,12 @@
 # Three Litthe Bugs
 
-## Table of Contents
+This is the fourth project of the Udacity Front-End Nanodegree Program. The purpose of the game is expanding my JavaScript skills.
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+You should use the arrow key to move throught the game panel in order to reach the water.
 
-## Instructions
+# How to play?
+Just download the zip file, unzip it and open the index.html file in browser.
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+Or if you prefer, click here: [https://violinapopova.github.io/Arcade-Game/](https://violinapopova.github.io/Arcade-Game/)
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
-
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+Enjoy!
